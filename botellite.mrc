@@ -62,3 +62,14 @@ on 1:text:*:#:{
       if ($1 == !addmsg) {
         write twitch_msg.txt $2- | msg $chan Added message!
 } } } }
+
+menu channel {
+  Botellite
+  .Enable and Disable
+  ..Enable:tw_act_time | echo * Bot enabled 
+  ..Disable:tw_stp_time | echo * Bot Disabled
+  .Config
+  ..Set Bot Master:twitch_boss
+  ..Set Message Timer:twitch_time
+  ..Open Message File:run notepad.exe twitch_msg.txt 
+}
