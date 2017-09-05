@@ -10,6 +10,7 @@ on 1:load:{
   if (!%tw_timer) {
     twitch_time
   }
+  if (!%tw_rand) { twitch_rand }
   if (!$isfile(twitch_msg.txt)) { 
     write twitch_msg.txt Add each line you want the bot to say in this file one after another. Remove this line!
     run notepad.exe twitch_msg.txt 
